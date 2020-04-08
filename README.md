@@ -22,17 +22,12 @@ try:
 except MaxLimitReached:
     print("max limit reached")
 except Exception as err:
-    print("other errors")
+    print("other errors ", err)
 # NOTE: check errors file for more exceptions
 
 # get json data:
 json_data = res.get_json()
 print(json_data)
-# country code:
-print(json_data["Result"]["Country"]["IsoCode"])
-# or
-print(res.get_country_code())
-
 ```
 
 #### Methods
